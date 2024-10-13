@@ -64,8 +64,9 @@ namespace MVI.Utils {
                 currentTask = null;
                 if (tasks.Count > 0) {
                     taskStart(tasks.Dequeue());
-                } else {
+                } else if (Completion != null) {
                     Completion?.Invoke();
+                    Completion = null;
                 }
             }
         }
