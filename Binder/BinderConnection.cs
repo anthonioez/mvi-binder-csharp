@@ -84,7 +84,7 @@ namespace MVI.Binder {
         public void OnEvent(object newEvent) {
             if (newEvent != null) {
                 object interceptedEvent = isIntercepted ? BinderMiddleware.Shared.Intercept(name, newEvent) : newEvent;
-                consumer?.Consume(transformer != null ? transformer.Tranform(interceptedEvent) : interceptedEvent);
+                consumer?.Consume(transformer != null ? transformer.Transform(interceptedEvent) : interceptedEvent);
             }
         }
 

@@ -2,7 +2,7 @@
 
     public interface BinderTransformer {
 
-        object Tranform(object input);
+        object Transform(object input);
 
     }
 
